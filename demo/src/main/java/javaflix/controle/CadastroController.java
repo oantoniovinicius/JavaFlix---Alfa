@@ -34,27 +34,23 @@ public class CadastroController {
     @FXML
     private Button cadastrar;
 
+    UserData UD = new UserData();
+
     @FXML
     void cadastrarBut(ActionEvent event) throws IOException {
-        ArrayList<User> userAAA = new ArrayList<>();
         String userR=userRegister.getText();
         String passwordR=passwordRegister.getText();
 
         User usuario = new User(userR, passwordR);
-        UserData UD = new UserData();
-
-        UD.insertUser(usuario);
-        userAAA = UD.searchUser();
-        boolean aux = false;
-        for(int index=0;index<userAAA.size();index++){
-            if(userR.equals(userAAA.get(index).getUsername())){
-                if(passwordR.equals(userAAA.get(index).getSenha()))
-                    aux = true;
-            }
-        }
-        if(aux==false){
-            System.out.println("Cadastro invalido");
+        
+        insertUser(usuario);
+        ArrayList<User> userReadSU = searchUser();
+        boolean aux = verifData(usuario, userReadSU);
+        
+        if(!(aux)){
+            System.out.println("Cadastro invalido/n"+userReadSU.size());
         }else{
+            System.out.println("Cadastro realizado/n"+userReadSU.size());
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../visao/sucessoCadastroFXML.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
@@ -68,6 +64,16 @@ public class CadastroController {
     @FXML
     void voltar(ActionEvent event) {
         StartJavaFlix.changeScene("login");
+    }
+
+    public ArrayList<User> insertUser(User u){
+        return UD.insertUser(u);
+    }
+    public ArrayList<User> searchUser(){
+        return UD.searchUser();
+    }
+    public boolean verifData(User user,ArrayList<User> userReadSU ){
+        return UD.verifData(user, userReadSU);
     }
 
 }

@@ -21,6 +21,7 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+
 public class controllerFavsScreen implements Initializable {
 
     ArrayList<Filme> titulos = new ArrayList<>();

@@ -7,14 +7,12 @@ import java.util.*;
 
 public class UserData implements Serializable{
     private ArrayList<User> usuario = new ArrayList<>();
-    private ArrayList<User> userRead = new ArrayList<>();
 
     private final void readObject(ObjectInputStream aInputStream) throws ClassNotFoundException, IOException {
         aInputStream.defaultReadObject();
     }
 
-    public boolean insertUser(User user) {
-        boolean aux;
+    public ArrayList<User> insertUser(User user) {
         FileOutputStream fluxo = null;
         ObjectOutputStream obs = null;
         try {
@@ -22,16 +20,12 @@ public class UserData implements Serializable{
             obs = new ObjectOutputStream(fluxo);
             usuario.add(user);
             obs.writeObject(user);
-            aux = true;
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado");
-            aux = false;
         } catch (IOException x) {
             System.out.println(x.getMessage());
-            aux = false;
         }catch (NullPointerException r) {
             System.out.println(r.getMessage());
-            aux = false;
         }finally{
             if(obs != null)
                 try{
@@ -40,21 +34,24 @@ public class UserData implements Serializable{
                     System.out.println(e.getMessage());
                 }
         }
-        return aux;
+        return usuario;
     }
 
     public ArrayList<User> searchUser(){
+        ArrayList<User> userRead = null;
         FileInputStream fluxo = null;
         ObjectInputStream obs = null;
         try {
+            userRead = new ArrayList<>();
             fluxo = new FileInputStream("Users.ser");
+
             while (fluxo.available() > 0) {
                 obs = new ObjectInputStream(fluxo);
                 User u = (User) obs.readObject();
                 userRead.add(u);
                 for (int i = 0; i < userRead.size(); i++) {
-                    for(int j = 1; j < userRead.size(); j++){
-                        if(userRead.get(i) == userRead.get(j))
+                    for(int j = i+1; j < userRead.size(); j++){
+                        if(userRead.get(i) == userRead.get(j) || userRead.get(j) == null)
                             userRead.remove(userRead.get(j));
                     }
 
@@ -79,11 +76,15 @@ public class UserData implements Serializable{
         return userRead;
     }
 
-    public boolean verifData(String nome, String senha, int index){
+    public boolean verifData(User user,ArrayList<User> userReadSU){
         boolean aux = false;
-        if(nome.equals(userRead.get(index).getUsername())){
-            if(senha.equals(userRead.get(index).getSenha()))
-                aux = true;
+        for(int index = 0; index < userReadSU.size(); index++){
+            if(user.getUsername().equals(userReadSU.get(index).getUsername())){
+                if(user.getSenha().equals(userReadSU.get(index).getSenha())){
+                    aux = true;
+                    return aux;
+                }
+            }         
         }
         return aux;
     }

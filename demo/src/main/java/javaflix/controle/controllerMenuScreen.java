@@ -4,14 +4,7 @@ import java.io.IOException;
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
-
-import info.movito.themoviedbapi.TmdbApi;
-import info.movito.themoviedbapi.TmdbMovies;
-import info.movito.themoviedbapi.TmdbMovies.MovieMethod;
-import info.movito.themoviedbapi.model.Genre;
-import info.movito.themoviedbapi.model.MovieDb;
 //import java.util.*;
 //import info.movito.themoviedbapi.TmdbApi;
 //import info.movito.themoviedbapi.TmdbMovies;
