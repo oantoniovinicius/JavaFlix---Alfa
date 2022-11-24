@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaflix.controle.controllerStartScreen">
+   <children>
+      <ImageView fx:id="javaflixBackground" fitHeight="608.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/TELA-01.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoIniciar" layoutX="453.0" layoutY="361.0" mnemonicParsing="false" onAction="#clickButtonStart" prefHeight="49.0" prefWidth="174.0" style="-fx-background-radius: 50px;" stylesheets="@style.css" text="INICIAR" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,146 @@
+#listViewTitulos {
+    -fx-control-inner-background: rgb(25, 27, 31);
+    -fx-font: 15pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-color: rgb(0, 150, 201);
+    -fx-border-top-width: 5px;
+}
+
+#botaoIniciar {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 14pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#botaoIniciar:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+#login {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 14pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#login:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+#voltar {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 14pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#voltar:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+#cadastre {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 14pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#cadastre:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+#cadastrar {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 14pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#cadastrar:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+
+#buttomInicioSpecific {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 9pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#buttomInicioSpecific:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+
+#buttomFavsSpecific {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 9pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#buttomFavsSpecific:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+
+#searchButton {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 10pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#searchButton:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+
+#OkButton {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 10pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+}
+
+#OkButton:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+
+#anchorPaneNoMovie {
+-fx-background-color: rgb(25, 27, 31);
+}
+
+#AddbuttonFavs {
+    -fx-background-color: rgb(25, 27, 31);
+    -fx-font: 10pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-radius: 20%;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(0, 151, 204, 255);
+
+}
+
+#AddbuttonFavs:hover {
+    -fx-background-color: rgba(0, 151, 204, 255);
+}
+
+#listViewFavs {
+    -fx-control-inner-background: rgb(25, 27, 31);
+    -fx-font: 15pt "Arial";
+    -fx-font-weight: bold;
+    -fx-border-color: rgb(0, 150, 201);
+    -fx-border-top-width: 5px;    
+}

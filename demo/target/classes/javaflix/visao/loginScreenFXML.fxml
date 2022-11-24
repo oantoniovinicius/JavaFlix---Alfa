@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaflix.controle.LoginController">
+   <children>
+      <ImageView fitHeight="608.0" fitWidth="1000.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@Assets/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="322.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/user.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="userName" layoutX="364.0" layoutY="283.0" prefHeight="40.0" prefWidth="271.0" promptText="Nome de usuário" style="-fx-background-color: transparent; -fx-border-color: #0097cc; -fx-border-width: 0px 0px 2px;">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <ImageView fitHeight="33.0" fitWidth="40.0" layoutX="322.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/key.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="login" layoutX="411.0" layoutY="413.0" mnemonicParsing="false" onAction="#clickButtonStart" prefHeight="40.0" prefWidth="179.0" style="-fx-background-radius: 50px;" stylesheets="@style.css" text="LOGIN" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Button>
+      <Button fx:id="cadastre" layoutX="410.0" layoutY="471.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="179.0" style="-fx-background-radius: 50px;" stylesheets="@style.css" text="CADASTRE-SE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Button>
+      <TextField fx:id="passwordField" layoutX="365.0" layoutY="346.0" prefHeight="40.0" prefWidth="271.0" promptText="Senha" style="-fx-background-color: transparent; -fx-border-color: #0097cc; -fx-border-width: 0px 0px 2px;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaflix.controle.controllerFavsScreen">
+   <children>
+      <ImageView fx:id="menuBackground" fitHeight="608.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/TELAfavs.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="listViewFavs" layoutX="227.0" layoutY="124.0" onMouseClicked="#clickListViewFavs" prefHeight="500.0" prefWidth="835.0" stylesheets="@style.css" />
+      <Button fx:id="buttomInicioSpecific" layoutX="90.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickButtomInicioSpecific" prefHeight="2.0" prefWidth="87.0" style="-fx-background-radius: 50;" stylesheets="@style.css" text="Início" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchBar" layoutX="593.0" layoutY="58.0" prefHeight="28.0" prefWidth="305.0" promptText="Digite o nome do filme desejado" />
+      <Button fx:id="searchButton" layoutX="908.0" layoutY="58.0" mnemonicParsing="false" onAction="#search" prefHeight="27.0" prefWidth="101.0" style="-fx-background-radius: 50;" stylesheets="@style.css" text="Pesquisar" textAlignment="CENTER" textFill="WHITE" />
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="259.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/FAVS.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
